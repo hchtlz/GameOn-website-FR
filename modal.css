@@ -8,7 +8,18 @@
   margin: 0;
   padding: 0;
 }
-/* Landing Page */
+
+main {
+  border-radius: 2rem;
+  color: black;
+  font-size: 130%;
+  font-weight: bolder;
+  margin: 1px 20px 15px;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  padding-top: 0.5vw;
+  text-align: justify;
+}
 
 body {
   margin: 0;
@@ -26,6 +37,20 @@ p {
   padding: 0.5vw;
 }
 
+label {
+  font-family: var(--font-default);
+  font-size: 17px;
+  font-weight: normal;
+  display: inline-block;
+  margin-bottom: 11px;
+}
+
+input {
+  padding: 8px;
+  border: 0.8px solid #ccc;
+  outline: none;
+}
+
 img {
   padding-right: 1rem;
 }
@@ -41,90 +66,43 @@ img {
     float: right;
 }
 .topnav a {
-  float: left;
-  display: block;
   color: #000000;
-  text-align: center;
-  padding: 12px 12px;
-  margin: 5px;
-  text-decoration: none;
-  font-size: 20px;
+  display: block;
+  float: left;
   font-family: Roboto, sans-serif;
+  font-size: 20px;
+  margin: 5px;
+  padding: 12px 12px;
+  text-align: center;
+  text-decoration: none;
 }
 
 .topnav a:hover {
   background-color: #ff0000;
-  color: #ffffff;
   border-radius: 15px;
+  color: #ffffff;
 }
 
 .topnav a.active {
   background-color: #ff0000;
-  color: #ffffff;
   border-radius: 15px;
+  color: #ffffff;
 }
 
 .topnav .icon {
   display: none;
 }
 
-@media screen and (max-width: 768px) {
-  .topnav a {display: none;}
-  .topnav a.icon {
-    float: right;
-    display: block;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .topnav.responsive {position: relative;}
-  .topnav.responsive .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .topnav.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-}
-
-
-
- @media screen and (max-width: 540px) {
-  .topnav a {display: none;}
-  .topnav a.icon {
-    float: right;
-    display: block;
-    margin-top: -15px;
-  }
-} 
-
-main {
-  font-size: 130%;
-  font-weight: bolder;
-  color: black;
-  padding-top: 0.5vw;
-  padding-left: 2vw;
-  padding-right: 2vw;
-  margin: 1px 20px 15px;
-  border-radius: 2rem;
-  text-align: justify;
-
-
-}
-
 .modal-btn {
-  font-size: 145%;
   background: #fe142f;
-  display: flex;
-  margin: auto;
-  padding: 2em;
-  color: #fff;
-  padding: 0.75rem 2.5rem;
   border-radius: 1rem;
+  color: #fff;
   cursor: pointer;
+  display: flex;
+  font-size: 145%;
+  margin: auto;
+  padding: 0.75rem 2.5rem;
+  padding: 2em;
 }
 
 .modal-btn:hover {
@@ -188,18 +166,6 @@ main {
   margin: 15px auto;
 }
 
-label {
-  font-family: var(--font-default);
-  font-size: 17px;
-  font-weight: normal;
-  display: inline-block;
-  margin-bottom: 11px;
-}
-input {
-  padding: 8px;
-  border: 0.8px solid #ccc;
-  outline: none;
-}
 .text-control {
   margin: 0;
   padding: 8px;
@@ -232,6 +198,7 @@ input[data-error]::after {
     font-size: 0.4em;
     color: red;
 } */
+
 .checkbox-label,
 .checkbox2-label {
   position: relative;
@@ -478,6 +445,9 @@ footer {
   padding-right: 2vw;
   margin: 0 20px;
 }
+
+/* media queries */ 
+
 @media screen and (max-width: 800px) {
   .hero-section {
     display: block;
@@ -516,6 +486,36 @@ footer {
     text-align: center;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .topnav a {display: none;}
+  .topnav a.icon {
+    display: block;
+    float: right;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    display: block;
+    float: none;
+    text-align: left;
+  }
+}
+ @media screen and (max-width: 540px) {
+  .topnav a {display: none;}
+  .topnav a.icon {
+    display: block;
+    float: right;
+    margin-top: -15px;
+  }
+} 
 
 @keyframes modalopen {
   from {
