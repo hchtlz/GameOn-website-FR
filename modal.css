@@ -57,7 +57,9 @@ img {
 
 .error {
   padding: 0;
-  margin: 0;
+  margin: 5px 0;
+  font-size: 14px;
+  color: #FF4E60;
 }
 
 .topnav {
