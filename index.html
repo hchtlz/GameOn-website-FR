@@ -41,12 +41,12 @@
 				<span class="close"></span>
         <div 
         id="form-confirmation">
-        <span>Merci ! Votre réservation a été reçue.</span>
-        <input class="btn-submit" type="submit" class="button" value="Fermer"/>
-
+        <div></div>
+        <div><span>Merci pour votre inscription</span></div>
+        <div><input class="btn-submit" type="submit" class="button" id="btn-close" value="Fermer"/></div>
       </div>
 				<div class="modal-body">
-					<form id="form" name="reserve" action="index.html" method="POST" onsubmit="return validate(event);">
+					<form id="form" name="reserve" action="index.html" method="POST" onsubmit="return validate(event)">
 						<div class="formData">
 							<label for="first">Prénom</label>
 							<br>
@@ -80,6 +80,7 @@
 						<p class="text-label">
 							A quel tournoi souhaitez-vous participer cette année ?
 						</p>
+            <p class="error" id="error-location"></p>
 						<div class="formData">
 							<input class="checkbox-input" type="radio" id="location1" name="location" value="New York"/>
 							<label class="checkbox-label" for="location1"><span class="checkbox-icon"></span>New York</label>
@@ -98,7 +99,6 @@
 							
               <input class="checkbox-input" type="radio" id="location6" name="location" value="Portland"/>
 							<label class="checkbox-label" for="location6"><span class="checkbox-icon"></span>Portland</label>
-              <p class="error" id="error-location"></p>
             </div>
 						<div class="formData">
 							<input class="checkbox-input" type="checkbox" id="checkbox1"/>

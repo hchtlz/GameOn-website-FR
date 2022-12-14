@@ -48,7 +48,7 @@ function validate(event) {
   if (firstName.value.length < 2) {
       error = true;
       document.getElementById("error-first-name").innerHTML = "Veuillez entrer 2 caractères ou plus pour le champ du prénom.";
-      document.getElementById("first").style.border = "1px solid red";
+      document.getElementById("first").style.border = "2px solid red";
   }
 
   // validation last name
@@ -57,7 +57,7 @@ function validate(event) {
   if (lastName.value.length < 2) {
       error = true;
       document.getElementById("error-last-name").innerHTML = "Veuillez entrer 2 caractères ou plus pour le champ du nom.";
-      document.getElementById("last").style.border = "1px solid red";
+      document.getElementById("last").style.border = "2px solid red";
   }
 
   // validation email with regex
@@ -67,7 +67,7 @@ function validate(event) {
   if (!emailRegex.test(email.value)) {
       error = true;
       document.getElementById("error-email").innerHTML = "Veuillez entrer une adresse email valide.";
-      document.getElementById("email").style.border = "1px solid red";
+      document.getElementById("email").style.border = "2px solid red";
   }
 
   // validation quantity of tournaments with regex 
@@ -77,7 +77,7 @@ function validate(event) {
   if (!quantityRegex.test(quantity.value)) {
       error = true;
       document.getElementById("error-quantity").innerHTML = "Veuillez entrer un nombre valide.";
-      document.getElementById("quantity").style.border = "1px solid red";
+      document.getElementById("quantity").style.border = "2px solid red";
   }
 
   /*   // validation of birthdate
@@ -86,7 +86,7 @@ function validate(event) {
     if (birthdate.value == "") {
       error = true;
       document.getElementById("error-birthdate").innerHTML = "Vous devez entrer votre date de naissance.";
-      document.getElementById("birthdate").style.border = "1px solid red";
+      document.getElementById("birthdate").style.border = "2px solid red";
     } */
 
   // validation of tournament location
@@ -114,15 +114,16 @@ function validate(event) {
   const validation = document.getElementById("btn-validation");
 
   if (!error) {
-      validation.addEventListener("click", function() {
-          document.getElementById("form").style.display = "none";
-          document.getElementById("form-confirmation").style.display = "block";
-      });
+    document.getElementById("form").style.display = "none";
+    document.getElementById("form-confirmation").style.display = "flex"; 
   }
 
+  // close the form with the button
+  const closeValidation = document.getElementById("btn-close");
+
+  closeValidation.addEventListener("click", closeModal);
+
   // Manage the error 
-  if (error) {
-      event.preventDefault();
-  }
+    event.preventDefault();
 
 }
