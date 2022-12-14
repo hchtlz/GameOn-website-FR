@@ -77,6 +77,14 @@ function validate(event) {
     document.getElementById("error-quantity").innerHTML = "Veuillez entrer un nombre valide.";
   }
 
+  // validation of birthdate
+  const birthdate = document.getElementById("birthdate");
+
+  if (birthdate.value == "") {
+    error = true;
+    document.getElementById("error-birthdate").innerHTML = "Vous devez entrer votre date de naissance.";
+  }
+
   // validation of tournament location
   const location1 = document.getElementById("location1");
   const location2 = document.getElementById("location2");
@@ -87,7 +95,7 @@ function validate(event) {
 
   if (!location1.checked && !location2.checked && !location3.checked && !location4.checked && !location5.checked && !location6.checked) {
     error = true;
-    document.getElementById("error-location").innerHTML = "Vous devez choisir une ville.";
+    document.getElementById("error-location").innerHTML = "Vous devez choisir une option.";
   }
 
   // validation of the checkbox
@@ -95,7 +103,7 @@ function validate(event) {
 
   if (!checkbox.checked) {
     error = true;
-    document.getElementById("error-checkbox").innerHTML = "Vous devez accepter les termes et conditions.";
+    document.getElementById("error-checkbox").innerHTML = "Vous devez vérifier que vous acceptez les termes et conditions.";
   }
 
   // Manage the error 
