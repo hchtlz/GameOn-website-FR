@@ -40,6 +40,10 @@ function outsideClick(e) {
 // Validation of the form
 
 function validate(event) {
+
+  // Manage the error 
+  event.preventDefault();
+
   let error = false;
 
   // validation first name
@@ -50,6 +54,10 @@ function validate(event) {
       document.getElementById("error-first-name").innerHTML = "Veuillez entrer 2 caractères ou plus pour le champ du prénom.";
       document.getElementById("first").style.border = "2px solid red";
   }
+  else {
+    document.getElementById("error-first-name").innerHTML = "";
+    document.getElementById("first").style.border = "";
+  }
 
   // validation last name
   const lastName = document.getElementById("last");
@@ -58,6 +66,10 @@ function validate(event) {
       error = true;
       document.getElementById("error-last-name").innerHTML = "Veuillez entrer 2 caractères ou plus pour le champ du nom.";
       document.getElementById("last").style.border = "2px solid red";
+  }
+  else {
+    document.getElementById("error-last-name").innerHTML = "";
+    document.getElementById("last").style.border = "";
   }
 
   // validation email with regex
@@ -69,25 +81,37 @@ function validate(event) {
       document.getElementById("error-email").innerHTML = "Veuillez entrer une adresse email valide.";
       document.getElementById("email").style.border = "2px solid red";
   }
+  else {
+    document.getElementById("error-email").innerHTML = "";
+    document.getElementById("email").style.border = "";
+  }
 
   // validation quantity of tournaments with regex 
   const quantity = document.getElementById("quantity");
-  const quantityRegex = /^[0-9]{1,2}$/;
+  const quantityRegex = /^[0-9]+$/;
 
   if (!quantityRegex.test(quantity.value)) {
       error = true;
       document.getElementById("error-quantity").innerHTML = "Veuillez entrer un nombre valide.";
       document.getElementById("quantity").style.border = "2px solid red";
   }
+  else {
+    document.getElementById("error-quantity").innerHTML = "";
+    document.getElementById("quantity").style.border = "";
+  }
 
-  /*   // validation of birthdate
+    // validation of birthdate
     const birthdate = document.getElementById("birthdate");
 
     if (birthdate.value == "") {
       error = true;
       document.getElementById("error-birthdate").innerHTML = "Vous devez entrer votre date de naissance.";
       document.getElementById("birthdate").style.border = "2px solid red";
-    } */
+    } 
+    else {
+      document.getElementById("error-birthdate").innerHTML = "";
+      document.getElementById("birthdate").style.border = "";
+    }
 
   // validation of tournament location
   const location1 = document.getElementById("location1");
@@ -101,6 +125,9 @@ function validate(event) {
       error = true;
       document.getElementById("error-location").innerHTML = "Vous devez choisir une option.";
   }
+  else {
+    document.getElementById("error-location").innerHTML = "";
+  }
 
   // validation of the checkbox
   const checkbox = document.getElementById("checkbox1");
@@ -108,6 +135,9 @@ function validate(event) {
   if (!checkbox.checked) {
       error = true;
       document.getElementById("error-checkbox").innerHTML = "Vous devez vérifier que vous acceptez les termes et conditions.";
+  }
+  else {
+    document.getElementById("error-checkbox").innerHTML = "";
   }
 
   // add message if the form is valid
@@ -122,8 +152,4 @@ function validate(event) {
   const closeValidation = document.getElementById("btn-close");
 
   closeValidation.addEventListener("click", closeModal);
-
-  // Manage the error 
-    event.preventDefault();
-
 }
