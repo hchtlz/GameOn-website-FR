@@ -37,11 +37,11 @@ function outsideClick(e) {
   }
 }
 
-// Validation of the form
+// validation of the form
 
 function validate(event) {
 
-  // Manage the error 
+  // manage the error 
   event.preventDefault();
 
   let error = false;
@@ -100,18 +100,18 @@ function validate(event) {
     document.getElementById("quantity").style.border = "";
   }
 
-    // validation of birthdate
-    const birthdate = document.getElementById("birthdate");
+  // validation of birthdate
+  const birthdate = document.getElementById("birthdate");
 
-    if (birthdate.value == "") {
-      error = true;
-      document.getElementById("error-birthdate").innerHTML = "Vous devez entrer votre date de naissance.";
-      document.getElementById("birthdate").style.border = "2px solid red";
-    } 
-    else {
-      document.getElementById("error-birthdate").innerHTML = "";
-      document.getElementById("birthdate").style.border = "";
-    }
+  if (birthdate.value == "") {
+    error = true;
+    document.getElementById("error-birthdate").innerHTML = "Vous devez entrer votre date de naissance.";
+    document.getElementById("birthdate").style.border = "2px solid red";
+  } 
+  else {
+    document.getElementById("error-birthdate").innerHTML = "";
+    document.getElementById("birthdate").style.border = "";
+  }
 
   // validation of tournament location
   const location1 = document.getElementById("location1");
@@ -141,8 +141,6 @@ function validate(event) {
   }
 
   // add message if the form is valid
-  const validation = document.getElementById("btn-validation");
-
   if (!error) {
     document.getElementById("form").style.display = "none";
     document.getElementById("form-confirmation").style.display = "flex"; 
