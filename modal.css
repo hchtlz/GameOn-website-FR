@@ -13,7 +13,7 @@
 main {
 	border-radius: 2rem;
 	color: black;
-	font-size: 130%;
+	font-size: 100%;
 	font-weight: bolder;
 	margin: 1px 20px 15px;
 	padding-left: 2vw;
@@ -40,7 +40,7 @@ p {
 
 label {
 	font-family: var(--font-default);
-	font-size: 17px;
+	font-size: 14px;
 	font-weight: normal;
 	display: inline-block;
 	margin-bottom: 11px;
@@ -81,13 +81,13 @@ img {
 }
 
 .topnav a:hover {
-  background-color: #ff0000;
+  background-color: #FE142F;
 	border-radius: 15px;
 	color: #ffffff;
 }
 
 .topnav a.active {
-  background-color: #ff0000;
+  background-color: #FE142F;
 	border-radius: 15px;
 	color: #ffffff;
 }
@@ -427,10 +427,11 @@ img {
 	white-space: nowrap;
 }
 .hero-text {
-	width: 146%;
-	font-weight: normal;
 	margin-top: 57px;
 	padding: 0;
+  width: 150%;
+  font-weight: 400;
+  font-size: 24px;
 }
 .hero-img {
 	grid-column: span 8;
@@ -448,7 +449,7 @@ img {
 .error {
   padding: 0;
   margin: 5px 0;
-  font-size: 14px;
+  font-size: 11px;
   color: #FF4E60;
 }
 
@@ -490,41 +491,107 @@ footer {
 
 /* media queries */
 
-@media screen and (max-width: 800px) {
-	.hero-section {
+/* media queries - tablet */
+@media screen and (max-width: 1024px) {
+
+  .content {
+    border-radius: 10px;
+    margin: 0;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .bground {
+    top: 88px;
+  }
+
+  .close {
+    top: 39px;
+  }
+
+  img {
+    padding-right: 1rem;
+    padding: 1rem;
+  }
+
+  #myTopnav {
+    display: flex;
+    z-index: 10;
+    background-color: white;
+    display: block ruby;
+    align-items: flex-start;
+    padding: 5px 26px;
+  }
+  .topnav {
+    margin: 0;
+  }
+  .topnav a {
+		display: none;
+	}
+	.topnav a.icon {
+		display: block;
+		float: right;
+		margin-top: 18px;
+    color: #FE142F;
+	}
+  .topnav a.icon:hover {
+    color: #FFF;
+  }
+	.topnav.responsive {
+		position: relative;
+    background-color: white;
+    height: 50vh;
+	}
+	.topnav.responsive .icon {
+		position: absolute;
+    right: 0;
+    top: 0;
+    margin: 5px 26px;
+    margin-top: 18px;
+    display: block;
+	}
+	.topnav.responsive a {
+		display: block;
+		float: none;
+		text-align: left;
+    margin-bottom: 20px;
+	}
+  .nav-link{
+    margin-top : 70px;
+  }
+
+  .hero-section {
 		display: block;
 		box-shadow: unset;
+    min-height: unset;
 	}
-
 	.hero-content {
 		background: #fff;
 		color: #000;
 		padding: 20px;
+    min-width: unset;
+    width: 100%;
 	}
-
+  .hero-headline {
+    font-size: 50px;
+    font-weight: bold;
+    white-space: normal;
+  }
+  .hero-text{
+    font-size: 18px;
+    margin-top: 17px;
+    width: 100%
+  }
 	.hero-content::after {
 		content: unset;
 	}
-
 	.hero-content .btn-signup {
 		display: none;
 	}
-
-	.hero-headline {
-		font-size: 4.5rem;
-		white-space: normal;
-	}
-
-	.hero-text {
-		width: unset;
-		font-size: 1.5rem;
-	}
-
 	.hero-img img {
 		border-radius: 10px;
 		margin-top: 40px;
 	}
-
 	.hero-section>.btn-signup {
 		display: block;
 		margin: 32px auto 10px;
@@ -532,52 +599,56 @@ footer {
 	}
 
 	.copyrights {
-		margin-top: 50px;
+    margin-bottom: 20px;
+    margin-top: 0;
 		text-align: center;
 	}
+
+  footer {
+    margin: 13px 0;
+  }
 }
 
-@media screen and (max-width: 768px) {
-	.topnav a {
-		display: none;
-	}
-
-	.topnav a.icon {
-		display: block;
-		float: right;
-	}
-}
-
-@media screen and (max-width: 768px) {
-	.topnav.responsive {
-		position: relative;
-	}
-
-	.topnav.responsive .icon {
-		position: absolute;
-		right: 0;
-		top: 0;
-	}
-
-	.topnav.responsive a {
-		display: block;
-		float: none;
-		text-align: left;
-	}
-}
+/* media queries - phone screen */
 
 @media screen and (max-width: 540px) {
-	.topnav a {
-		display: none;
-	}
 
-	.topnav a.icon {
-		display: block;
-		float: right;
-		margin-top: -15px;
+  .hero-headline {
+    font-size: 46px;
+    font-weight: bold;
+    white-space: normal;
+  }
+  .hero-text{
+    font-size: 13px;
+    margin-top: 17px;
+    width: 100%
+  }
+  .hero-content {
+    min-width: unset;
+    width: 100%;
+  }
+
+  .header-logo {
+    width: 47%;
+  }
+  img {
+    width: 166px;
+  }
+
+  .topnav a.icon {
+    margin-top: 7px;
+    }
+
+  .btn-signup {
+    font-size: 1.3rem;
+    font-size: 15px;
+  }
+  .copyrights {
+    font-size : 14px;
 	}
 }
 
+/* animations */
 @keyframes modalopen {
 	from {
 		opacity: 0;

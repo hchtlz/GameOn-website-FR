@@ -1,3 +1,6 @@
+/**
+ * Function for the navigation bar (header responsive)
+ */
 function editNav() {
   var x = document.getElementById("myTopnav");
   if (x.className === "topnav") {
@@ -16,7 +19,9 @@ const closeBtn = document.querySelector(".close");
 // launch modal event
 modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
 
-// launch modal form
+/** 
+ * Function for launching the modal form
+ */
 function launchModal() {
   modalbg.style.display = "block";
 }
@@ -24,6 +29,9 @@ function launchModal() {
 // close modal form
 closeBtn.addEventListener("click", closeModal);
 
+/**
+ * Function for closing the modal form
+ */
 function closeModal() {
   modalbg.style.display = "none";
 }
@@ -31,14 +39,18 @@ function closeModal() {
 // close modal form when clicking outside of the form
 window.addEventListener("click", outsideClick);
 
+/** 
+ * Function for closing the modal when clicking outside of the form
+ */
 function outsideClick(e) {
   if (e.target == modalbg) {
       modalbg.style.display = "none";
   }
 }
 
-// validation of the form
-
+/**
+ * Function for the validation of the form
+ */
 function validate(event) {
 
   // manage the error 

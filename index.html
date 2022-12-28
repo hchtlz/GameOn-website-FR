@@ -14,12 +14,13 @@
 				<img alt="logo" src="Logo.png" width="auto" height="auto" />
 			</div>
 			<div class="main-navbar">
-				<a href="#" class="active"><span>Accueil</span></a>
-				<a href="#"><span>Détails de l'évènement</span></a>
-				<a href="#"><span>À propos</span></a>
-				<a href="#"><span>Contact</span></a>
-				<a href="#"><span>Évènements passés</span></a>
-				<a href="javascript:void(0);" class="icon" onclick="editNav()"><i class="fa fa-bars"></i></a>
+          <a href="javascript:"void(0);" class="icon" onclick="editNav()"><i class="fa fa-bars"></i></a>
+          <div class="nav-link">
+          <a href="#" class="active"><span>Détails de l'évènement</span></a>
+          <a href="#"><span>À propos</span></a>
+          <a href="#"><span>Contact</span></a>
+          <a href="#"><span>Évènements passés</span></a>
+        </div>
 			</div>
 		</div>
 	</div>
@@ -82,7 +83,7 @@
 						</p>
             <p class="error" id="error-location"></p>
 						<div class="formData">
-							<input class="checkbox-input" type="radio" id="location1" name="location" value="New York"/>
+							<input class="checkbox-input" type="radio" id="location1" name="location" value="New York" checked/>
 							<label class="checkbox-label" for="location1"><span class="checkbox-icon"></span>New York</label>
 							
               <input class="checkbox-input" type="radio" id="location2" name="location" value="San Francisco"/>
@@ -101,7 +102,7 @@
 							<label class="checkbox-label" for="location6"><span class="checkbox-icon"></span>Portland</label>
             </div>
 						<div class="formData">
-							<input class="checkbox-input" type="checkbox" id="checkbox1"/>
+							<input class="checkbox-input" type="checkbox" id="checkbox1" checked/>
 							<label class="checkbox2-label" for="checkbox1"><span class="checkbox-icon"></span>J'ai lu et accepté les conditions d'utilisation.</label>
               <p class="error" id="error-checkbox"></p>
               <input class="checkbox-input" type="checkbox" id="checkbox2" />
