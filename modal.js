@@ -55,6 +55,7 @@ function validate(event) {
 
   // manage the error 
   event.preventDefault();
+  
 
   let error = false;
 
@@ -163,3 +164,42 @@ function validate(event) {
 
   closeValidation.addEventListener("click", closeModal);
 }
+
+// launch new form after validation
+if (document.getElementById("btn-close")) {
+  document.getElementById("btn-close").addEventListener("click", launchNewForm);
+}
+
+/**
+ * Function for launching a new form
+ */
+function launchNewForm() {
+  document.getElementById("form").style.display = "block";
+  document.getElementById("form-confirmation").style.display = "none";
+}
+
+// launch new form after validation with empty fields
+if (document.getElementById("btn-close")) {
+  document.getElementById("btn-close").addEventListener("click", emptyFields);
+}
+
+/**
+ * Function for emptying the fields of the form
+ */
+function emptyFields() {
+  document.getElementById("first").value = "";
+  document.getElementById("last").value = "";
+  document.getElementById("email").value = "";
+  document.getElementById("birthdate").value = "";
+  document.getElementById("quantity").value = "";
+  document.getElementById("location1").checked = false;
+  document.getElementById("location2").checked = false;
+  document.getElementById("location3").checked = false;
+  document.getElementById("location4").checked = false;
+  document.getElementById("location5").checked = false;
+  document.getElementById("location6").checked = false;
+  document.getElementById("checkbox1").checked = false;
+}
+
+
+
