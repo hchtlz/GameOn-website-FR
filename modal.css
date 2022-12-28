@@ -502,7 +502,9 @@ footer {
   }
 
   .bground {
-    top: 78px;
+    top: 68px;
+    z-index: 20;
+    overflow: scroll;
   }
 
   .close {
