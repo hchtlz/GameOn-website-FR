@@ -163,42 +163,63 @@ function validate(event) {
   const closeValidation = document.getElementById("btn-close");
 
   closeValidation.addEventListener("click", closeModal);
-}
 
-// launch new form after validation
-if (document.getElementById("btn-close")) {
-  document.getElementById("btn-close").addEventListener("click", launchNewForm);
-}
+  // launch new form after validation
+  if (document.getElementById("btn-close")) {
+    document.getElementById("btn-close").addEventListener("click", launchNewForm);
+  }
 
-/**
- * Function for launching a new form
- */
-function launchNewForm() {
-  document.getElementById("form").style.display = "block";
-  document.getElementById("form-confirmation").style.display = "none";
-}
+  /**
+   * Function for launching a new form
+   */
+  function launchNewForm() {
+    document.getElementById("form").style.display = "block";
+    document.getElementById("form-confirmation").style.display = "none";
+  }
 
-// launch new form after validation with empty fields
-if (document.getElementById("btn-close")) {
-  document.getElementById("btn-close").addEventListener("click", emptyFields);
-}
+  // launch new form after validation with empty fields
+  if (document.getElementById("btn-close")) {
+    document.getElementById("btn-close").addEventListener("click", emptyFields);
+  }
 
-/**
- * Function for emptying the fields of the form
- */
-function emptyFields() {
-  document.getElementById("first").value = "";
-  document.getElementById("last").value = "";
-  document.getElementById("email").value = "";
-  document.getElementById("birthdate").value = "";
-  document.getElementById("quantity").value = "";
-  document.getElementById("location1").checked = false;
-  document.getElementById("location2").checked = false;
-  document.getElementById("location3").checked = false;
-  document.getElementById("location4").checked = false;
-  document.getElementById("location5").checked = false;
-  document.getElementById("location6").checked = false;
-  document.getElementById("checkbox1").checked = false;
+  /**
+   * Function for emptying the fields of the form
+   */
+  function emptyFields() {
+    document.getElementById("first").value = "";
+    document.getElementById("last").value = "";
+    document.getElementById("email").value = "";
+    document.getElementById("birthdate").value = "";
+    document.getElementById("quantity").value = "";
+    document.getElementById("location1").checked = false;
+    document.getElementById("location2").checked = false;
+    document.getElementById("location3").checked = false;
+    document.getElementById("location4").checked = false;
+    document.getElementById("location5").checked = false;
+    document.getElementById("location6").checked = false;
+    document.getElementById("checkbox1").checked = false;
+  }
+
+  // launch new form with box checked and button radio checked
+  if (document.getElementById("btn-close")) {
+    document.getElementById("btn-close").addEventListener("click", checkCheckbox);
+
+    document.getElementById("btn-close").addEventListener("click", checkRadio);
+  }
+
+  /**
+   * Function for checking the checkbox
+   */
+  function checkCheckbox() {
+    document.getElementById("checkbox1").checked = true;
+  }
+
+  /**
+   * Function for checking the radio button
+   */
+  function checkRadio() {
+    document.getElementById("location1").checked = true;
+  }
 }
 
 
