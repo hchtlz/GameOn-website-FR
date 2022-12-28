@@ -520,7 +520,6 @@ footer {
   }
 
   #myTopnav {
-    background-color: white;
     padding: 5px 26px;
     margin: 0;
   }
@@ -537,9 +536,11 @@ footer {
     color: #FFF;
   }
 	.topnav.responsive {
-		position: relative;
-    background-color: white;
-    height: 50vh;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background-color: #fdecec;
 	}
 	.topnav.responsive .icon {
 		position: absolute;
