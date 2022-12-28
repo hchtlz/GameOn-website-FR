@@ -502,35 +502,35 @@ footer {
   }
 
   .bground {
-    top: 88px;
+    top: 78px;
   }
 
   .close {
-    top: 39px;
+    top: 15px;
   }
 
   img {
     padding-right: 1rem;
     padding: 1rem;
+    width: 200px;
   }
 
-  #myTopnav {
-    display: flex;
-    z-index: 10;
-    background-color: white;
-    display: block ruby;
-    align-items: flex-start;
-    padding: 5px 26px;
+  .modal-body {
     margin: 0;
   }
 
+  #myTopnav {
+    background-color: white;
+    padding: 5px 26px;
+    margin: 0;
+  }
   .topnav a {
 		display: none;
 	}
 	.topnav a.icon {
 		display: block;
 		float: right;
-		margin-top: 18px;
+		margin-top: 8px;
     color: #FE142F;
 	}
   .topnav a.icon:hover {
@@ -546,7 +546,7 @@ footer {
     right: 0;
     top: 0;
     margin: 5px 26px;
-    margin-top: 18px;
+    margin-top: 8px;
     display: block;
 	}
 	.topnav.responsive a {
@@ -629,6 +629,16 @@ footer {
 
   img {
     width: 166px;
+  }
+
+  label {
+    font-size: 12px;
+  }
+  .text-label {
+    font-size: 12px;
+  }
+  .text-control {
+    font-size: 12px;
   }
 
   .topnav a.icon {
