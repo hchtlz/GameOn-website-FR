@@ -613,7 +613,7 @@ footer {
 @media screen and (max-width: 540px) {
 
   .hero-headline {
-    font-size: 46px;
+    font-size: 35px;
     font-weight: bold;
     white-space: normal;
   }
@@ -626,7 +626,7 @@ footer {
     min-width: unset;
     width: 100%;
   }
-  
+
   img {
     width: 166px;
   }
